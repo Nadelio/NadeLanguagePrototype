@@ -51,7 +51,7 @@ method call:(Protected)(make triangle)
 //NOTE: Protected, Private, and Public are the ways you need to define them, writing them in lower-case will throw an error
 // excluding the method type will default the method to Public
 
-// method names are... going to be confusing, think of them as strings, they can have anything in them, but to be called correctly, need to be EXACT, so if you have a method named "make Triangle", to call it, you need to do exactly "make Triangle", "maketriangle", "make triangle", etc. WILL NOT WORK
+// method names are... going to be confusing, think of them as strings, they can have anything in them, but to be called correctly, they need to be EXACT, so if you have a method named "make Triangle", to call it, you need to do exactly "make Triangle". "maketriangle", "make triangle", etc. WILL NOT WORK
 
 // to define a method name, you need to do:
 method call:(/*insert method name here*/)
