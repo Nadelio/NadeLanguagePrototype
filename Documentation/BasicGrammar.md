@@ -38,6 +38,8 @@ method logic:(/*you can declare the method name, but that is optional*/)
 )
 
 // parentheses act like curly braces in Java or C#, they encapsulate anything relating to the body header (i.e. method define:(), method logic:()(), define return:(), etc.)
+
+//NOTE: Variables can be defined outside of methods and datatypes, mirroring Java and C#.
 ```
 That is the basic "structure" of methods, I will now go into the variations of method header definitions and how to define and call methods:
 ```
@@ -111,19 +113,31 @@ body define: (/* body name here, again think Java class names */)(/* this set of
 // to define a body with these types you do:
 body define: (/*if you are defining a abstract body or a system, you would write it here*/)(/* public/private/protected */)(/* body name */)(/* and where all the methods/datatypes/logic/etc go */)
 
-// body logic is the bodies "main" method, think Java's main, you all know it, "public static void main(String [] args){}", basically "body logic: ()" is Nade's version of that
-
+// body logic is the bodies "Update" method, think Unity's Update() method
 // an example:
 body define: (Public)(TestBody)(
-    method define: (writeHelloWorld)
-    method logic: (writeHelloWorld)(
+
+    Public int count; // automatically defaults to 0
+
+    method define: (countUp)
+    method logic: (countUp)(
         define return: ({data.type.null};);
-        method call: (write {"Hello World"});
+        count++; // adds 1 to count
+        method call: (write {count});
         return: (null;);
     )
 
     body logic:(
-        method call: (writeHelloWorld);
+        method call: (countUp); // counts up until the program is stopped
     )
 )
+
+// body init is the bodies "main" method, think Java's main, you all know it, "public static void main(String [] args){}", basically "body init: ()" is Nade's version of that
+// an example
+body define: (Public)(TestBodyInit)(
+    body init:(
+        method call: (write {"Hello World!"});
+    )
+)
+
 ```
