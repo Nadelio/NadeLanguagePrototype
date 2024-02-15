@@ -39,19 +39,20 @@ method logic:(/*you can declare the method name, but that is optional*/)
 
 // parentheses act like curly braces in Java or C#, they encapsulate anything relating to the body header (i.e. method define:(), method logic:()(), define return:(), etc.)
 ```
-That is the basic "structure" of methods, I will now go into the variations of method header definitions and how to define methods:
+That is the basic "structure" of methods, I will now go into the variations of method header definitions and how to define and call methods:
 ```
 // methods, similiarly to Java and C#, have 3 types: private, public, and protected
-// private can only be defineed from the parent body or a child body
-// public can be defineed anywhere by anything
-// protected can be defineed from only the parent body, so if I have a method, lets say "make triangle", and it is protected, only the body it is written in, lets say "Draw", can define it
+// private can only be called from the parent body or a child body
+// public can be called anywhere by anything
+// protected can be called from only the parent body, so if I have a method, lets say "make triangle", and it is protected, only the body it is written in, lets say "Draw", can define it
 
 // to define a method as one of these, you write its method define like:
 method define:(Protected)(make triangle)
 //NOTE: Protected, Private, and Public are the ways you need to define them, writing them in lower-case will throw an error
 // excluding the method type will default the method to Public
 
-// method names are... going to be confusing, think of them as strings, they can have anything in them, but to be called correctly, they need to be EXACT, so if you have a method named "make Triangle", to define it, you need to do exactly "make Triangle". "maketriangle", "make triangle", etc. WILL NOT WORK
+// method names are... going to be confusing, think of them as strings, they can have anything in them, but to be called correctly, they need to be EXACT, so if you have a method named "make Triangle", to define it, you need to do exactly "make Triangle".
+// "maketriangle", "make triangle", etc. WILL NOT WORK
 
 // to define a method name, you need to do:
 method define:(/*insert method name here*/)
