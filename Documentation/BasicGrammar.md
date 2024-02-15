@@ -63,3 +63,4 @@ method call:(write Hello World)
 method call:(write {param.type.string})
 
 //NOTE: for custom data types, use the body path of it
+// Ex: body1.datatype or package.body1.datatype, etc.
