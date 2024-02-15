@@ -65,6 +65,12 @@ method define:(write Hello World)
 // for method parameters, make sure to surround your parameter in curly braces, like:
 method define:(write {param.type.string})
 
+// to define a name to a parameter, write the parameter declaration like:
+// {param.type.string : <parameter name>}
+// this will look like this in a full method declaration:
+method define:(add{param.type.int : a}{param.type.int : b})
+//NOTE: white-space is not required inside the parameter declarations, I put that there for readability
+
 //NOTE: for custom data types, use the body path of it
 // Ex: <bodyname>.<datatypename> or <packagename>.<bodyname>.<datatypename>, etc.
 

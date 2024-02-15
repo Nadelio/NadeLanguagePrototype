@@ -1,0 +1,13 @@
+body define: (Public)(Main)
+(
+    method define: (add{param.type.int}{param.type.int})
+    method logic: (add{param.type.int : a}{param.type.int : b})(
+        define return:({data.type.int};);
+        int sum = a + b;
+        return: (sum;);
+    )
+
+    body init:(
+        method call:(write {"Hello World!"});
+    )
+)
