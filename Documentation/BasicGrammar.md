@@ -6,7 +6,7 @@ So this is where all the basic rules and syntax will be laid out, no methods, no
 //Nade will use the same comment syntax as Java, because I think it looks nice
 
 // <- so this is a line comment
-/* <- and this is a in-line comment ->
+/* <- and this is a in-line comment -> */
 
 // Nade will also use the same end line syntax as Java/C#, again because I like the way it looks
 
