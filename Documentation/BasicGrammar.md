@@ -114,8 +114,8 @@ body define: (/* body name here, again think Java class names */)(/* this set of
 // abstract, system, normal/default
 // and private, public, protected
 
-// abstract is a body that can't have datatypes, but can have methods
-// system is a body that does have datatypes, but cannot have methods
+// abstract is a body that can't have datatypes or init:(), but can have methods 
+// system is a body that does have datatypes, but cannot have methods or init:()
 // normal/default is a body that can have datatypes and methods
 // all of these types can be offspring or parents
 

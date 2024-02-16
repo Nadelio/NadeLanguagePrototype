@@ -1,0 +1,25 @@
+body define: (Abstract)(Public)(BasicMath)(
+    method define: (Public)(sum{param.type.int:a}{param.type.int:b})
+    method logic: (sum{param.type.int:a}{param.type.int:b})(
+        define return: ({data.type.int};);
+        return: ({a + b};);
+    )
+
+    method define: (Public)(difference{param.type.int:a}{param.type.int:b})
+    method logic: (difference{param.type.int:a}{param.type.int:b})(
+        define return: ({data.type.int};);
+        return: ({a - b};);
+    )
+
+    method define: (Public)(product{param.type.int:a}{param.type.int:b})
+    method logic: (product{param.type.int:a}{param.type.int:b})(
+        define return: ({data.type.int};);
+        return: ({a * b};);
+    )
+
+    method define: (Public)(quotient{param.type.int:a}{param.type.int:b})
+    method logic: (quotient{param.type.int:a}{param.type.int:b})(
+        define return: ({data.type.double};);
+        return: ({a / b};);
+    )
+)
