@@ -77,8 +77,17 @@ method define:(add{param.type.int : a}{param.type.int : b})
 // to call a method, you need to use:
 method call:(/*method name plus parameters*/);
 
+// to call a method that is in a different body/package, do:
+method call: (/*package name, if necessary*/).(/*body name*/).(/*method name plus parameters*/);
+// an example would be:
+method call: (System).(Close); // this is (body).(method)
+method call: (BaseLib).(Math).(Cos{1}Deg); // this is (package).(body).(method) // the method gets the cos value of 1 degree
+                                           // BaseLib is the package that houses all of the default library
+
 // if you are setting the return value to a variable, do:
 method call:(/*method name plus parameters*/);
+
+// a full expression template would look like this:
 /*variable type (if not defined yet)*/ /*variable name*/ = (/*method name plus parameters*/) : method return;
 
 // an example would be:
@@ -146,4 +155,14 @@ body define: (Public)(TestBodyInit)(
     )
 )
 
+// to define if a body is a child of another body do this:
+body define: (Public)(ChildBody) : (ParentBody)(
+    body init: ()
+)
+
+// to define the package a body is in, do this:
+(Package) : (/* insert package name here*/)
+body define: (Public)(ParentBody)(
+    body init: ()
+)
 ```
